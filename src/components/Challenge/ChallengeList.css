@@ -1,0 +1,35 @@
+.board_menu_bar {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.board_menu_bar>select {
+    padding: 12px 10px;
+    background-color: rgb(226, 235, 250);
+    cursor: pointer;
+    font-size: 15px;
+    width: 20%;
+    border-radius: 5px;
+    border: none;
+}
+
+.board_menu_bar>button {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(202, 219, 248);
+}
+
+.item_subject>div {
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,22 @@
+.TodoItem {
+    display: flex;
+    gap: 20px;
+    margin: 20px 10px;
+    align-items: center;
+}
+
+.TodoItem .date {
+    text-align: left;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgb(48, 48, 48);
+    background-color: white;
+    /* border: 2px solid rgb(45, 71, 100); */
+    border: none;
+    border-bottom: 2px solid green;
+
+}

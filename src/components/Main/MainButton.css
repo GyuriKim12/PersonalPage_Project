@@ -1,0 +1,33 @@
+.MainButton {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.MainButton_button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.MainButton_title>h2 {
+    font-size: 24px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.MainButton_button>button {
+    border: 5px solid black;
+    border-radius: 5px;
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+    width: 120px;
+    height: 120px;
+    border: 3px solid black;
+    text-align: center;
+    font-size: 70px;
+    margin: auto;
+}

@@ -1,0 +1,32 @@
+.DiaryItem {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.DiaryItem .emotion img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.DiaryItem .info_section {
+    flex: 1;
+}
+
+.DiaryItem .info_section .date {
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(62, 82, 121);
+    margin-bottom: 10px;
+}
+
+.content {
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

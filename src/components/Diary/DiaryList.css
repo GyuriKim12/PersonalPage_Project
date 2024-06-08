@@ -1,0 +1,82 @@
+.DiaryList {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+.DiaryList .menu_bar {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.menu_bar>select {
+    /* margin-top: 10px; */
+    padding: 12px 10px;
+    background-color: rgb(226, 235, 250);
+    cursor: pointer;
+    font-size: 15px;
+    width: 15%;
+    border-radius: 5px;
+    border: none;
+}
+
+
+.menu_h3 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex: 1;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.menu_h3_sub {
+    /* background-color: rgb(79, 124, 206); */
+    border: 5px solid rgb(59, 89, 145);
+    padding: 0px 25px;
+    border-radius: 50%;
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.menu_h3 .h3 {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+.menu_h3 .h3>h4 {
+    font-size: 16px;
+    font-weight: 600;
+    word-spacing: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu_h3_sub>p {
+    font-size: 23px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 800;
+    color: black;
+}
+
+.menu_bar>button {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(202, 219, 248);
+}

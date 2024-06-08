@@ -1,0 +1,49 @@
+.BoardListHeader {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.BoardListHeader>h2 {
+    /* flex: 1; */
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(18, 53, 119);
+    word-spacing: 5px;
+    line-height: 40px;
+}
+
+.BoardListHeader>button {
+    cursor: pointer;
+    font-size: 23px;
+    color: #343A40;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 40px;
+
+}
+
+.BoardListHeader .HomeButton {
+    flex: 1;
+    margin-left: 0 auto;
+}
+
+.subtitle {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.subtitle>button {
+    text-align: left;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: #343A40;
+    padding: 10px 20px;
+    border-radius: 5px;
+    word-spacing: 4px;
+    border: none;
+    background-color: rgb(202, 219, 248);
+}

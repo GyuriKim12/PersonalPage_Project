@@ -1,0 +1,26 @@
+.Button {
+    cursor: pointer;
+    font-size: 23px;
+    color: #343A40;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    word-spacing: 3px;
+    /* outline: 0;
+    border: 0; */
+
+}
+
+
+.Button_add {
+    font-size: 20px;
+    border: none;
+    background-color: #F1F3F5;
+}
+
+.Button_edit {
+    font-size: 15px;
+    border-color: black;
+    background-color: #fafafa;
+    border: 2px solid rgb(180, 180, 180);
+}

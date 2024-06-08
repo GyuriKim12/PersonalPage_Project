@@ -1,0 +1,39 @@
+/* @font-face {
+  font-family: "NanumSquareNeo";
+  src: url("/NanumSquareNeo-Variable.ttf");
+}
+
+body * {
+  font-family: "NanumSquareNeo";
+} */
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
+  src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"),
+    url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
+}
+
+
+/* @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css'); */
+
+* {
+  font-family: 'NanumSquareNeo';
+}
+
+html body {
+  background-color: rgb(243, 243, 243);
+
+}
+
+#root {
+  max-width: 650px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  padding-bottom: 10;
+  background-color: white;
+}

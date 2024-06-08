@@ -1,0 +1,32 @@
+.DiaryHeader {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.DiaryHeader>h2 {
+    /* flex: 1; */
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(18, 53, 119);
+    word-spacing: 5px;
+    line-height: 40px;
+    margin-bottom: 10px;
+}
+
+.DiaryHeader>button {
+    cursor: pointer;
+    font-size: 23px;
+    color: #343A40;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 5px;
+    width: 40px;
+
+}
+
+.DiaryHeader .HomeButton {
+    flex: 1;
+    margin-left: 0 auto;
+}

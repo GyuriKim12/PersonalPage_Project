@@ -1,0 +1,21 @@
+.img_section {
+    display: flex;
+}
+
+.button {
+    margin-left: auto;
+    width: 60px;
+    height: 65px;
+    z-index: 0;
+    border: none;
+    background-color: transparent;
+    margin-left: 0 auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+.img {
+    width: 55px;
+}

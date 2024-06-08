@@ -1,0 +1,170 @@
+.DiaryHeader>div {
+    flex: 1;
+}
+
+.DiaryWriting>section {
+    margin-bottom: 40px;
+}
+
+.DiaryWriting>section>h3 {
+    font-size: 20px;
+    padding: 5px 5px;
+}
+
+.DiaryWriting>section>input {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.DiaryWriting .date_true {
+    display: none;
+}
+
+.DiaryWriting .date_false {
+    visibility: visible;
+}
+
+.DiaryWriting .emotion_section>div {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.DiaryWriting .writing_section>textarea {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 16px;
+    resize: vertical;
+    box-sizing: border-box;
+    min-height: 250px;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.DiaryWriting .button_section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.DiaryWriting .button_section>button {
+    cursor: pointer;
+    font-size: 32px;
+    font-weight: 450;
+    background-color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+.DiaryWriting .button_section .delete_true {
+    visibility: visible;
+}
+
+.DiaryWriting .button_section .delete_false {
+    visibility: hidden;
+}
+
+.subtitle_1 {
+    display: flex;
+}
+
+.h4_emotion {
+    background-color: rgb(43, 128, 202);
+    color: white;
+    padding: 2px;
+}
+
+.subtitle_sub>h4 {
+    font-size: 18px;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+
+.subtitle_sub {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -50px;
+}
+
+.subtitle_div {
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitle_div>h4 {
+    margin-top: auto;
+    margin-bottom: 50px;
+    font-size: 26px;
+    line-height: 40px;
+    padding: 0px 5px;
+    font-weight: 500;
+    color: black;
+    text-align: left;
+}
+
+.subtitle_div2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 1px;
+}
+
+.h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.title_100 {
+    font-size: 30px;
+    background-color: rgb(43, 128, 202);
+    color: white;
+    font-weight: 800;
+    /* padding: 12px 10px;
+    border-radius: 50%;
+    height: 50%;
+    width: 30%; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    /* transform: rotate(10deg); */
+    padding: 3px;
+    margin-left: auto;
+}
+
+
+.h3>div>h1 {
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    margin-bottom: 10px;
+    border: 5px solid black;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
+.h3>div>div {
+    font-size: 19px;
+    text-align: center;
+}
+
+.h3_1 {
+    font-size: 28px;
+}
+
+.h3_2 {
+    font-size: 18px;
+    font-weight: 500;
+    word-spacing: 3px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
