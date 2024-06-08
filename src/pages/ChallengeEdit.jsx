@@ -26,30 +26,27 @@ const ChallengeEdit = () => {
     }
 
     const onUpdateState = (input) => {
-        if (input.state === false) {
+        if (input.daily[input.daily.length - 1].ischecked && input.state === false) {
             onChallengeUpdate(input.id, input.startDate, input.subject, true, input.daily)
 
         }
-        else {
+        if (!input.daily[input.daily.length - 1].ischecked && input.state === true) {
             onChallengeUpdate(input.id, input.startDate, input.subject, false, input.daily)
-
         }
+
     }
 
-    const onUpdateChecked = (index) => {
-        const findData = data.map((item) => ({
-            ...item, daily: item.daily.map((dailyItem) => {
-                const findIndex = item.daily.indexOf(dailyItem);
-                if (findIndex === index) {
-                    return { ...dailyItem, ischecked: !dailyItem.ischecked };
-                }
-                else return dailyItem
-            })
-        }))
-
-        findData.forEach((item) => {
-            onChallengeUpdate(item.id, item.startDate, item.subject, item.state, item.daily);
+    const onUpdateChecked = (input, index) => {
+        const updatedDaily = input.daily.map((dailyItem, dailyIndex) => {
+            if (dailyIndex === index) {
+                return { ...dailyItem, ischecked: !dailyItem.ischecked };
+            }
+            return dailyItem;
         });
+
+        const updatedInput = { ...input, daily: updatedDaily };
+
+        onChallengeUpdate(updatedInput.id, updatedInput.startDate, updatedInput.subject, updatedInput.state, updatedInput.daily);
 
     }
 

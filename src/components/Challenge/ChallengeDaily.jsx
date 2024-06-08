@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import './ChallengeDaily.css';
 
 const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) => {
@@ -11,6 +11,8 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
             daily: filtered.daily,
         }
     )
+    const wasLastCheckboxChecked = useRef(false);
+
 
     useEffect(() => {
         if (filtered) {
@@ -24,6 +26,7 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
             )
         }
     }, [filtered])
+
 
 
     const onChange = (e, index) => {
@@ -49,9 +52,9 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
 
     const onChangeChecked = (index) => {
         if (dailySaved(index)) {
-            onUpdateChecked(index);
+            onUpdateChecked(input, index);
             if (index === input.daily.length - 1) { // 마지막 체크박스일 때
-                onUpdateChecked(index);
+                onUpdateChecked(input, index);
             }
         } else {
             return;
@@ -61,7 +64,11 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
     useEffect(() => {
         const lastCheckboxChecked = input.daily[input.daily.length - 1].ischecked;
         if (lastCheckboxChecked) {
+            wasLastCheckboxChecked.current = true;
+        }
+        if (wasLastCheckboxChecked.current) {
             onUpdateState(input);
+
         }
     }, [input.daily]);
 
