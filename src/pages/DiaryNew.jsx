@@ -10,11 +10,6 @@ const DiaryNew = () => {
     const edit = false
     const nav = useNavigate();
     const onSubmitDiary = (input) => {
-        //날짜 존재하지만 일기 존재안함 -> onupdate
-        //날짜도 존재하고 일기도 존재함 -> onupdate
-        //날짜 존재안함 ->create
-
-        //날짜 존재하는지 확인
         const exist = data.some((item) => {
             return new Date(item.createdDate).toLocaleDateString() === new Date(input.createdDate).toLocaleDateString()
         })

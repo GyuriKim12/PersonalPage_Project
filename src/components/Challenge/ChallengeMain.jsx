@@ -17,7 +17,6 @@ const ChallengeMain = ({ data, onUpdate, onUpdateChecked, onUpdateState, onDelet
     const filtered = data[0]
     const findIndex = findLastCheckedIndex(filtered.daily) === -1 ? 0 : findLastCheckedIndex(filtered.daily) + 1
     const nav = useNavigate();
-
     return <div className='ChallengeWriting'>
         <div className='BoardHeader'>
             <Button text={"<"} nav={"challenge"} />
@@ -55,11 +54,6 @@ const ChallengeMain = ({ data, onUpdate, onUpdateChecked, onUpdateState, onDelet
                 onUpdate={onUpdate} onUpdateChecked={onUpdateChecked} onUpdateState={onUpdateState} />
 
         </section>
-        {/* 
-        <section className="challengeEdit">
-
-        </section> */}
-
 
         <div className='challenge_edit'>
             <div className='editCheck'>

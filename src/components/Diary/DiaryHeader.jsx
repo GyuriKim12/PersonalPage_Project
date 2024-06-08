@@ -1,6 +1,4 @@
 import './DiaryHeader.css'
-import { useContext, useState } from "react";
-import { DiaryStateContext } from "../../App";
 import MonthButton from '../MonthButton';
 import HomeButton from '../HomeButton';
 

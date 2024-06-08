@@ -3,7 +3,6 @@ import Button from '../Button';
 import TodoToday from './TodoToday';
 import { useState, useRef, useEffect, useContext } from 'react';
 import { DiaryStateContext } from '../../App';
-import getFilteredDate from '../../utils/getFilteredDate';
 
 const getStringDate = (date) => {
     let getYear = date.getFullYear()
@@ -94,7 +93,6 @@ const TodoWriting = ({ onSubmit, onUpdateTodo, onDeleteTodo, initData, edit, onP
         }
         onSubmit(input)
         setProgress(onProcess(input.id))
-        console.log(progress)
     }
 
     const onChange = (e) => {

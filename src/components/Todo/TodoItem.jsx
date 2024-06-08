@@ -1,5 +1,5 @@
 import './TodoItem.css'
-import { useParams, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const TodoItem = ({ id, createdDate, emotionId, content }) => {
     const nav = useNavigate();

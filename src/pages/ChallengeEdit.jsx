@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router"
 import ChallengeMain from "../components/Challenge/ChallengeMain"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { ChallengeDispatchContext, ChallengeStateContext } from "../App"
 const ChallengeEdit = () => {
     const params = useParams()
@@ -26,7 +26,14 @@ const ChallengeEdit = () => {
     }
 
     const onUpdateState = (input) => {
-        onChallengeUpdate(input.id, input.startDate, input.subject, input.state, input.daily)
+        if (input.state === false) {
+            onChallengeUpdate(input.id, input.startDate, input.subject, true, input.daily)
+
+        }
+        else {
+            onChallengeUpdate(input.id, input.startDate, input.subject, false, input.daily)
+
+        }
     }
 
     const onUpdateChecked = (index) => {

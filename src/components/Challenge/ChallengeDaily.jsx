@@ -37,55 +37,6 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
 
     }
 
-    const onChangeChecked = (index) => {
-        if (dailySaved(index)) {
-            // let checked = true;
-            // for (let i = 0; i < input.daily.length; i++) {
-            //     if (!input.daily[i].ischecked) {
-            //         checked = false;
-            //         break;
-            //     }
-            // }
-            onUpdateChecked(index);
-
-            // onUpdateState({ ...input, state: checked });
-        } else {
-            return;
-        }
-    };
-
-    useEffect(() => {
-        let checked = true;
-        for (let i = 0; i < input.daily.length; i++) {
-            if (!input.daily[i].ischecked) {
-                checked = false;
-                break;
-            }
-        }
-        onUpdateState({ ...input, state: checked });
-    }, [input.daily]);
-
-
-    const finalChecked = () => {
-        let checked = false
-        for (let i = 0; i < input.daily.length; i++) {
-            if (input.daily[i].ischecked) {
-                checked = true
-            }
-            else {
-                checked = false;
-            }
-        }
-        if (checked) {
-            onUpdateState({ ...input, state: checked });
-        }
-        else {
-            window.alert('Challenge가 끝까지 완수되지 않았습니다.')
-            return;
-        }
-
-    }
-
     const dailySaved = (index) => {
         if (input.daily[index].item !== "") {
             return true
@@ -96,6 +47,23 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
         }
     }
 
+    const onChangeChecked = (index) => {
+        if (dailySaved(index)) {
+            onUpdateChecked(index);
+            if (index === input.daily.length - 1) { // 마지막 체크박스일 때
+                onUpdateChecked(index);
+            }
+        } else {
+            return;
+        }
+    };
+
+    useEffect(() => {
+        const lastCheckboxChecked = input.daily[input.daily.length - 1].ischecked;
+        if (lastCheckboxChecked) {
+            onUpdateState(input);
+        }
+    }, [input.daily]);
 
     return (
         <div className="ChallengeDaily">
@@ -127,12 +95,6 @@ const ChallengeDaily = ({ filtered, onUpdate, onUpdateChecked, onUpdateState }) 
 
                 </div>
             ))}
-            {/* <div className='finalCheck'>
-                <div>
-                    If U
-                </div>
-                <button onClick={() => finalChecked()}>Finish?! ☑️( Click ) Hear!</button>
-            </div> */}
         </div>
     );
 };

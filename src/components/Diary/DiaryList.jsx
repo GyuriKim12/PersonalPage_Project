@@ -1,8 +1,6 @@
-import Button from "../Button";
 import DiaryItem from "./DiaryItem";
 import './DiaryList.css'
 import { useState } from "react";
-import image from './../../assets/image3.jpg'
 import { useNavigate } from "react-router";
 
 const DiaryList = ({ data }) => {

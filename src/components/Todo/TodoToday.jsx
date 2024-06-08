@@ -1,6 +1,4 @@
 import './TodoToday.css'
-import { useContext } from 'react';
-import { DiaryDispatchContext } from '../../App';
 
 const TodoToday = ({ id, createdDate, emotionId, content, todo, data, onUpdateTodo, onDeleteTodo }) => {
 

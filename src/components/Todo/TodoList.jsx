@@ -1,7 +1,5 @@
-// import Button from "../button";
 import TodoItem from "./TodoItem";
 import './../Diary/DiaryHeader.css'
-import Button from "../Button";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
@@ -26,7 +24,6 @@ const TodoList = ({ data }) => {
 
     const sortedDate = sortedData(data)
 
-    // console.log(data)
     return <div className="DiaryList">
         <div className="menu_h3">
             <div className="h3">

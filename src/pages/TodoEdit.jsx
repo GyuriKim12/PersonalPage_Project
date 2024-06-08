@@ -35,9 +35,6 @@ const TodoEdit = () => {
     }
 
     const onUpdateTodo = (data, input, index) => {
-        console.log(data);
-        // input과 item과 isChecked가 같은 값을 찾아내서 isChecked를 반대로 바꿈
-        // 그리고 onUpdate 실행시킴
         const findData = data.map((item) => ({
             ...item,
             todo: item.todo.map((todoItem, todoIndex) => { // 두 번째 매개변수로 현재 요소의 인덱스를 전달받음
@@ -55,14 +52,12 @@ const TodoEdit = () => {
     }
 
     const onDeleteTodo = (data, input, index) => {
-        console.log('삭제', index)
         const findData = data.map((item) => ({
             ...item,
             todo: item.todo.filter((todoItem, todoIndex) => {
                 return !(todoIndex === index && todoItem.item === input.item && todoItem.ischecked === input.ischecked);
             })
         }));
-        console.log(findData)
         findData.forEach((item) => {
             onUpdate(item.id, item.createdDate, item.emotionId, item.content, item.todo);
         });

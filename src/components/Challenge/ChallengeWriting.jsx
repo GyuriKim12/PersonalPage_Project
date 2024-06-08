@@ -2,10 +2,9 @@ import './ChallengeWriting.css'
 import EditButton from '../EditButton'
 import { useEffect, useState } from 'react'
 import getStringDate from '../../utils/getStringDate'
-import { useNavigate, useParams } from 'react-router'
+import { useNavigate } from 'react-router'
 
 const ChallengeWriting = ({ onCreate, onUpdate, initData }) => {
-    const params = useParams();
     const [input, setInput] = useState({
         startDate: new Date().getTime(),
         subject: "",
