@@ -31,7 +31,7 @@ const DiaryEdit = () => {
         const todo = item ? item.todo : [];
         const content = item ? input.content : "";
         const emotionId = item ? input.emotionId : 2;
-        if (window.confirm("일기를 정말 수정할까요?")) {
+        if (window.confirm("일기를 수정하시겠습니까?")) {
             onUpdate(params.id, input.createdDate.getTime(), emotionId, content, todo)
             nav('/diary', { replace: true })
         }
@@ -46,7 +46,7 @@ const DiaryEdit = () => {
         if (findData) {
             findData.content = ""
         }
-        if (window.confirm("일기를 정말 삭제할까요?")) {
+        if (window.confirm("삭제하면 복구되지 않습니다. 정말 삭제하시겠습니까?")) {
             onUpdate(findData.id, findData.createdDate, findData.emotionId, findData.content, findData.todo);
 
             nav('/diary', { replace: true })

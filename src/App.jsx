@@ -352,7 +352,7 @@ function App() {
                     <Route path='/board' element={<Board />} />
                     <Route path='/board/new' element={<BoardNew />} />
                     <Route path='/board/edit/:id' element={<BoardEdit />} />
-                    {/* <Route path='*' element={<NotFound />} /> */}
+                    <Route path='*' element={<NotFound />} />
                     <Route path='/challenge' element={<Challenge />} />
                     <Route path='/challenge/new' element={<ChallengeNew />} />
                     <Route path='/challenge/edit/:id' element={<ChallengeEdit />} />

@@ -19,7 +19,6 @@ const ChallengeEdit = () => {
                 else return dailyItem
             })
         }))
-
         findData.forEach((item) => {
             onChallengeUpdate(item.id, item.startDate, item.subject, item.state, item.daily);
         });
@@ -53,7 +52,7 @@ const ChallengeEdit = () => {
     const onDelete = (id) => {
         if (window.confirm('삭제하면 복구되지 않습니다. 정말 삭제하시겠습니까?')) {
             onChallengeDelete(id)
-            nav('/challenge')
+            nav('/challenge', { replace: true })
         }
 
 

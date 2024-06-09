@@ -12,13 +12,19 @@ const BoardEdit = () => {
     const initData = data.find((item) => String(item.id) === String(params.id))
 
     const onUpdate = (input) => {
-        onBoardUpdate(params.id, input.createdDate, input.title, input.content, input.img)
-        nav(-1, { replace: true })
+        if (window.confirm("글을 수정하시겠습니까?")) {
+            onBoardUpdate(params.id, input.createdDate, input.title, input.content, input.img)
+            nav('/board', { replace: true })
+        }
+
     }
 
     const onDelete = () => {
-        onBoardDelete(params.id)
-        nav(-1, { replace: true })
+        if (window.confirm('삭제하면 복구되지 않습니다. 정말 삭제하시겠습니까?')) {
+            onBoardDelete(params.id)
+            nav('/board', { replace: true })
+        }
+
     }
 
     return <div><BoardWriting edit={edit} initData={initData} onUpdate={onUpdate} onDelete={onDelete} /></div>
