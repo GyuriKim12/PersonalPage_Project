@@ -80,7 +80,13 @@ const ChallengeWriting = ({ onCreate, onUpdate, initData }) => {
             }
 
         }
-        setInput({ ...input, "daily": list });
+        if (list[list.length - 1].ischecked) {
+            setInput({ ...input, "daily": list, "state": true })
+        }
+        else {
+            setInput({ ...input, "daily": list, "state": false })
+
+        }
         setChange(true)
         setClickedButton(day)
     }
